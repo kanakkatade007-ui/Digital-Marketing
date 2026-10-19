@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lens &amp; Light Studio: Increasing Client Bookings</title>
+<style>
+:root{--bg:#faf7f2;--surface:#fff;--text:#1d1b19;--muted:#6b645c;--accent:#c8553d;--accent2:#e9a23b;--line:#e8e0d4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--surface:#201d18;--text:#f3ede4;--muted:#a89f92;--line:#35302a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15130f;--surface:#201d18;--text:#f3ede4;--muted:#a89f92;--line:#35302a;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px;gap:12px}
+header.top b{font-size:16px}header.top nav{display:flex;gap:16px;overflow-x:auto;white-space:nowrap;font-size:14px}
+header.top a{color:var(--muted);text-decoration:none}
+.tag{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0 30px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+h2{font-size:28px;margin:0 0 6px}h3{margin:0 0 6px;font-size:17px}
+.lead,.sub{color:var(--muted)}.sub{margin:0 0 24px}
+.btn{display:inline-block;margin:18px 10px 0 0;background:var(--accent);color:#fff;padding:11px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.o{background:none;color:var(--accent);border:1.5px solid var(--accent)}
+.art{width:100%;height:auto;display:block;border-radius:16px}
+section{padding:46px 0;border-top:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:10px 0 40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.stat{text-align:center}.stat b{display:block;font-size:32px;color:var(--accent)}.stat span{color:var(--muted);font-size:14px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kv{display:grid;grid-template-columns:100px 1fr;gap:6px 12px;font-size:15px}.kv dt{color:var(--muted)}.kv dd{margin:0;font-weight:600}
+.ico{font-size:28px}.age{display:inline-block;margin-top:8px;font-size:12px;background:var(--line);padding:2px 10px;border-radius:99px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}.chips span{background:var(--surface);border:1px solid var(--line);padding:5px 12px;border-radius:99px;font-size:14px}
+.serp{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
+.serp small{color:#1a7f4b}.serp h4{margin:2px 0;color:#1a5fd0;font-size:19px;font-weight:500}.serp p{margin:0;color:var(--muted);font-size:14px}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.post .hd{display:flex;align-items:center;gap:10px;padding:12px 14px;font-size:14px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.post svg{display:block;width:100%;height:auto}.post .bd{padding:14px}.post .bd b{color:var(--accent);font-size:12px;letter-spacing:.08em}
+.ad{border-radius:18px;overflow:hidden;color:#fff;background:linear-gradient(135deg,#c8553d,#8b3a62);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.ad div{padding:34px}.ad h3{font-size:26px;line-height:1.2;margin-bottom:10px}.ad p{margin:0 0 16px;opacity:.92}
+.ad .btn{background:#fff;color:#8b3a62;margin:0}
+.mail{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:640px}
+.mail .sj{font-weight:600;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.mail ul{padding-left:0;list-style:none}.mail li:before{content:"✓ ";color:var(--accent);font-weight:700}
+.num{font-size:26px;font-weight:700;color:var(--accent2)}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:760px){.hero,.g2,.g3,.ad{grid-template-columns:1fr}.g4,.stats{grid-template-columns:1fr 1fr}header.top b{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="camera" viewBox="0 0 120 90"><rect x="8" y="22" width="104" height="62" rx="10" fill="#1d1b19"/><rect x="38" y="10" width="30" height="16" rx="4" fill="#1d1b19"/><circle cx="60" cy="53" r="24" fill="#3a3631"/><circle cx="60" cy="53" r="17" fill="#0f2a3d"/><circle cx="53" cy="46" r="5" fill="#fff" opacity=".55"/><circle cx="98" cy="34" r="4" fill="#e9a23b"/></symbol>
+<symbol id="person" viewBox="0 0 100 100"><circle cx="50" cy="32" r="16" fill="#1d1b19" opacity=".85"/><path d="M14 100c0-26 15-40 36-40s36 14 36 40z" fill="#1d1b19" opacity=".85"/></symbol>
+<symbol id="rings" viewBox="0 0 100 70"><circle cx="38" cy="38" r="22" fill="none" stroke="#fff" stroke-width="6"/><circle cx="62" cy="38" r="22" fill="none" stroke="#fff" stroke-width="6" opacity=".85"/><path d="M38 6l5 8-5 8-5-8z" fill="#fff"/></symbol>
+<symbol id="mount" viewBox="0 0 120 60"><path d="M0 60L38 14l22 28 18-20 42 38z" fill="#1d1b19" opacity=".8"/><circle cx="92" cy="12" r="8" fill="#fff" opacity=".9"/></symbol>
+<symbol id="baby" viewBox="0 0 100 100"><circle cx="50" cy="44" r="26" fill="#fff" opacity=".92"/><circle cx="40" cy="42" r="3" fill="#1d1b19"/><circle cx="60" cy="42" r="3" fill="#1d1b19"/><path d="M40 55q10 9 20 0" stroke="#1d1b19" stroke-width="3" fill="none"/><circle cx="50" cy="17" r="7" fill="#fff" opacity=".92"/></symbol>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6c58b"/><stop offset="1" stop-color="#c8553d"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4b6c2"/><stop offset="1" stop-color="#8b3a62"/></linearGradient>
+<linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd3e6"/><stop offset="1" stop-color="#3b7ea1"/></linearGradient>
+<linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfe3b0"/><stop offset="1" stop-color="#4f7d4a"/></linearGradient>
+</defs></svg>
+
+<header class="top"><div class="wrap"><b>Lens &amp; Light Studio</b>
+<nav><a href="#profile">Business Profile</a><a href="#audience">Target Audience</a><a href="#seo">SEO</a><a href="#social">Social Media</a><a href="#ad">Advertisement</a><a href="#email">Email</a><a href="#improve">Improvement</a></nav></div></header>
+
+<div class="wrap">
+<div class="hero">
+<div><span class="tag">Digital Marketing Project</span>
+<h1>Increasing Client Bookings for Lens &amp; Light Photography Studio</h1>
+<p class="lead">Ek step-by-step plan jisse studio ko Nagpur ke couples, families aur businesses ke liye pehli choice banaya jaaye, SEO, social media, advertising aur email outreach ke through.</p>
+<a class="btn" href="#profile">Explore the Plan</a><a class="btn o" href="#ad">See the Ad</a></div>
+<svg class="art" viewBox="0 0 400 320" role="img" aria-label="Camera illustration"><rect width="400" height="320" fill="url(#g1)"/><circle cx="330" cy="60" r="70" fill="#fff" opacity=".18"/><circle cx="60" cy="290" r="90" fill="#fff" opacity=".14"/><use href="#camera" x="90" y="75" width="220" height="165"/><rect x="24" y="24" width="100" height="30" rx="15" fill="#fff"/><text x="74" y="44" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1d1b19">Book Now</text></svg>
+</div>
+<div class="stats">
+<div class="card stat"><b>800+</b><span>Shoots Completed</span></div>
+<div class="card stat"><b>6</b><span>Expert Photographers</span></div>
+<div class="card stat"><b>4.9★</b><span>Google Rating</span></div>
+<div class="card stat"><b>5</b><span>Years in Nagpur</span></div>
+</div>
+
+<section id="profile"><span class="tag">Business Profile</span><h2>Business Profile</h2>
+<p class="sub">Studio kaun hai aur is plan ka goal kya hai.</p>
+<div class="g2"><div class="card"><dl class="kv"><dt>Studio</dt><dd>Lens &amp; Light Studio</dd><dt>Type</dt><dd>Photography &amp; Videography Studio</dd><dt>Services</dt><dd>Wedding, Portrait, Maternity, Product</dd><dt>Location</dt><dd>Nagpur, Maharashtra</dd><dt>Contact</dt><dd>+91 90000 00000</dd><dt>Email</dt><dd>lensandlight.nagpur@gmail.com</dd></dl></div>
+<div class="card"><h3>Business Objective</h3><p>Online visibility badhana aur enquiries ko confirmed bookings mein convert karna, SEO, social media, ads aur email campaigns ke zariye, Nagpur ke clients ke beech.</p></div></div>
+<p class="note">Studio ka naam, contact aur stats placeholder hain. Apni real details se replace karein.</p></section>
+
+<section id="audience"><span class="tag">Target Audience</span><h2>Target Audience</h2>
+<p class="sub">Wo log jinhe booking ke liye target kiya jaayega.</p>
+<div class="g4">
+<div class="card"><div class="ico">💍</div><h3>Engaged Couples</h3><p>Pre-wedding aur wedding shoot dhoondhne wale couples.</p><span class="age">Age: 24–32</span></div>
+<div class="card"><div class="ico">👨‍👩‍👧</div><h3>Families</h3><p>Family portraits, festival aur birthday shoots.</p><span class="age">Age: 28–45</span></div>
+<div class="card"><div class="ico">🤰</div><h3>New Parents</h3><p>Maternity aur newborn shoots ke liye.</p><span class="age">Age: 25–35</span></div>
+<div class="card"><div class="ico">🛍️</div><h3>Local Businesses</h3><p>Product aur branding photography chahne wale.</p><span class="age">Owners &amp; Startups</span></div>
+</div></section>
+
+<section id="seo"><span class="tag">SEO</span><h2>SEO Keywords</h2>
+<p class="sub">Keywords jinse clients studio ko Google par dhoondhenge.</p>
+<b>SHORT-TAIL</b><div class="chips"><span>Photographer in Nagpur</span><span>Wedding Photography</span><span>Portrait Studio</span><span>Photo Studio</span></div>
+<b>LONG-TAIL</b><div class="chips"><span>Best wedding photographer in Nagpur</span><span>Affordable pre-wedding shoot in Nagpur</span><span>Maternity photoshoot studio near me</span><span>Product photography for small business Nagpur</span></div>
+<div class="g3"><div class="card"><h3>🔎 On-Page SEO</h3><p>Keywords ko titles, headings aur image alt text mein naturally use karein.</p></div><div class="card"><h3>📍 Local SEO</h3><p>Google Business Profile optimize karein aur genuine client reviews collect karein.</p></div><div class="card"><h3>📝 Content SEO</h3><p>Shoot tips, outfit guides aur real wedding stories blog par publish karein.</p></div></div>
+<div class="serp"><b>Example SEO Page</b><br><small>lensandlight.in › wedding-photographer-nagpur</small><h4>Best Wedding Photographer in Nagpur | Lens &amp; Light Studio</h4><p>Candid wedding, pre-wedding aur portrait photography in Nagpur. Packages dekhein aur aaj hi free consultation book karein.</p></div></section>
+
+<section id="social"><span class="tag">Social Media</span><h2>Social Media Marketing</h2>
+<p class="sub">Platform-wise plan: dikhna, trust banana aur booking karwana.</p>
+<div class="g2">
+<div class="post"><div class="hd"><div class="av">LL</div><div><b>Lens &amp; Light Studio</b><br><small>@lensandlight_nagpur</small></div></div><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="url(#g2)"/><use href="#rings" x="140" y="60" width="120" height="84"/><text x="200" y="200" font-family="system-ui,sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#fff">Her story, our frame</text></svg><div class="bd"><b>INSTAGRAM</b><h3>Reels &amp; Real Weddings</h3><p>Behind-the-scenes, before/after edits aur couple stories ke weekly Reels. <i>Goal: Reach &amp; recall.</i></p></div></div>
+<div class="post"><div class="hd"><div class="av">LL</div><div><b>Lens &amp; Light Studio</b><br><small>Facebook</small></div></div><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="url(#g4)"/><use href="#baby" x="130" y="40" width="140" height="140"/><text x="200" y="220" font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#fff">Moments that last a lifetime</text></svg><div class="bd"><b>FACEBOOK</b><h3>Albums &amp; Reviews</h3><p>Shoot albums, package updates aur client testimonials. <i>Goal: Reach local families.</i></p></div></div>
+<div class="post"><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="url(#g3)"/><rect x="80" y="40" width="240" height="46" rx="12" fill="#fff"/><text x="200" y="70" font-family="system-ui,sans-serif" font-size="15" text-anchor="middle" fill="#1d1b19">Hi! Wedding packages ki details?</text><rect x="100" y="100" width="220" height="46" rx="12" fill="#c8f2d4"/><text x="210" y="129" font-family="system-ui,sans-serif" font-size="15" text-anchor="middle" fill="#1d1b19">Sure! Aaj hi slot book karein 📸</text></svg><div class="bd"><b>WHATSAPP</b><h3>Instant Booking Enquiries</h3><p>Package catalogue, availability aur broadcast offers. <i>Goal: Direct bookings.</i></p></div></div>
+<div class="post"><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="url(#g1)"/><use href="#mount" x="0" y="110" width="400" height="150"/><circle cx="200" cy="100" r="30" fill="#fff"/><path d="M192 86l22 14-22 14z" fill="#c8553d"/></svg><div class="bd"><b>YOUTUBE</b><h3>Studio Tours &amp; Wedding Films</h3><p>Highlight films, studio tour aur photography tips. <i>Goal: Build trust.</i></p></div></div>
+</div></section>
+
+<section id="ad"><span class="tag">Advertisement</span><h2>Advertisement Design</h2><p class="sub">Meta Ads ke liye sample creative.</p>
+<div class="ad"><div><h3>Capture Moments. Create Memories. 📸</h3><p>Wedding · Pre-wedding · Portraits · Maternity<br>Limited slots this season. 15% off on early bookings.</p><a class="btn" href="#email">Book a Free Consultation</a></div>
+<svg viewBox="0 0 300 260" aria-hidden="true"><use href="#camera" x="60" y="50" width="180" height="135"/><use href="#rings" x="105" y="190" width="90" height="63"/></svg></div></section>
+
+<section id="email"><span class="tag">Email Marketing</span><h2>Email Marketing</h2><p class="sub">Enquiry follow-up aur seasonal offers ke liye sample email.</p>
+<div class="mail"><div class="sj">Subject: Your Wedding Season Slots Are Filling Fast 📸</div><h3>Dear Couple,</h3><p>Planning your big day? Lens &amp; Light Studio creates timeless, candid memories with a team that cares about every frame.</p>
+<ul><li>Experienced Photographers &amp; Videographers</li><li>Customised Packages</li><li>Fast Edit Delivery</li><li>Pre-wedding Shoot Included</li></ul>
+<p><b>Special Offer:</b> 15% off on bookings confirmed this month.</p><a class="btn" href="#profile" style="margin:0">Book a Free Consultation</a></div></section>
+
+<section id="improve"><span class="tag">Improvement</span><h2>Business Improvement Suggestions</h2><p class="sub">Reach, trust aur bookings badhane ke practical steps.</p>
+<div class="g3">
+<div class="card"><div class="num">01</div><h3>Google Business Profile</h3><p>Local search mein visibility badhayein aur reviews ko encourage karein.</p></div>
+<div class="card"><div class="num">02</div><h3>Client Testimonials</h3><p>Real feedback aur photo stories se naye clients ka bharosa jeetein.</p></div>
+<div class="card"><div class="num">03</div><h3>Instagram Reels</h3><p>Shoot ke behind-the-scenes aur edits regularly dikhayein.</p></div>
+<div class="card"><div class="num">04</div><h3>Referral Offers</h3><p>Purane clients ko discount dekar naye clients refer karwayein.</p></div>
+<div class="card"><div class="num">05</div><h3>Easy Booking</h3><p>WhatsApp enquiry aur simple online booking form rakhein.</p></div>
+<div class="card"><div class="num">06</div><h3>Track Performance</h3><p>Har channel se reach, enquiries aur bookings monthly track karein.</p></div></div></section>
+</div>
+<footer>© 2026 Lens &amp; Light Studio. Digital Marketing Project.<br>Made by Your Name</footer>
+</body>
+</html>
